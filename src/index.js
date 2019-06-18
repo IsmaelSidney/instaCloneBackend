@@ -12,7 +12,7 @@ const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
 mongoose.connect(
-    'mongodb+srv://admin:admin@cluster0-yfmw4.mongodb.net/test?retryWrites=true&w=majority',
+    process.env.MONGO_URL,
 {
     useNewUrlParser: true,
 });
